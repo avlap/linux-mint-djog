@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+install_driver(){
+	# Download and install driver.
+	# NOTE: Script checked niet of er een nieuwe driver beschikbaar is, dat zul je handmatig moeten doen.
+	PACKAGE="mLink-1.2.0-amd64.deb"
+	URL="https://dl.makeblock.com/mblock5/linux/$PACKAGE"
+	DOWNLOAD_DESTINATION="/tmp"
+
+
+	if ! [[ -e "$DOWNLOAD_DESTINATION/$PACKAGE" ]]; then
+		wget --waitretry=10 -P "$DOWNLOAD_DESTINATION" "$URL" || exit 1
+	fi
+	sudo dpkg -i "$DOWNLOAD_DESTINATION/$PACKAGE" || exit 1
+
+}
+
+
+#
+# MAIN
+#
+
+install_driver
+
+exit 0
+
+

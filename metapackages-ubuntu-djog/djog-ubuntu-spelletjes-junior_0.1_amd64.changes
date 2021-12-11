@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Fri, 10 Dec 2021 23:17:35 +0100
+Source: djog-ubuntu-spelletjes-junior
+Binary: djog-ubuntu-spelletjes-junior
+Architecture: all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-spelletjes-junior - Dit pakket installeert interessante spelletjes op Ubuntu voor kin
+Changes:
+ djog-ubuntu-spelletjes-junior (0.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ 8996991257004677021b82ac28c7f7d0739502b2 2248 djog-ubuntu-spelletjes-junior_0.1_all.deb
+ 6c33e7db800127429ff7b9b09e5f307462275528 5645 djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
+Checksums-Sha256:
+ 049525c0543f0777adf65c07725d4ba7c892e336f5f00e9658f3abf4a27d6c39 2248 djog-ubuntu-spelletjes-junior_0.1_all.deb
+ 4c4bd3f0515e5842b41994fca7441dd4e0a917c78c1d6c941af0e95b21d4e9d0 5645 djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
+Files:
+ 251ac3cf40f3d3b2f6b195748125c080 2248 misc optional djog-ubuntu-spelletjes-junior_0.1_all.deb
+ 74014306d4adaff823437c9505df05ee 5645 misc optional djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo

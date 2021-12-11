@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=Scratch Web
+Comment=Webtoepassing
+Exec=sh -c "chromium --app=https://scratch.mit.edu/projects/editor/?tutorial=getStarted --class=WebApp-Scratchweb0766 --user-data-dir\=\$HOME/.local/share/ice/profiles/Scratchweb0766"
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/djog-scratch-webapp/ScratchWeb.png
+Categories=GTK;Development;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Scratchweb0766
+StartupNotify=true
+X-WebApp-URL=https://scratch.mit.edu/projects/editor/?tutorial=getStarted
+X-WebApp-Isolated=true
+

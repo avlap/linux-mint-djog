@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DJOG-boekjes-processing
+Comment=Tool om djog processing boekjes te downloaden.
+Exec=djog-boekjes-download -p
+Icon=djog-processing-icon
+Terminal=true
+Type=Application
+Categories=ConsoleOnly;Utility;
+Keywords=boekjes;download;djog;DJOG;processing;

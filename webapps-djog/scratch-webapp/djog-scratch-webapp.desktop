@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DJOG-scratch-webapp
+Comment=Tool om Scratch webapp te installeren voor DJOG.
+Exec=djog-scratch-webapp-install -s
+Icon=djog-scratch-webapp-icon
+Terminal=true
+Type=Application
+Categories=ConsoleOnly;Utility;
+Keywords=webapp;scratch;djog;DJOG;web;installatie;installeren;

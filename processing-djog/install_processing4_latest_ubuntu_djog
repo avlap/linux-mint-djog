@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+# license: GPL 3
+
+# Bron en credits: https://gist.github.com/gvenzl/1386755861fb42db492276d3864a378c
+
+# processing 3:
+# https://api.github.com/repos/processing/processing4/releases/latest
+# https://github.com/processing/processing/archive/
+
+# processing 4:
+# https://github.com/processing/processing4/releases/download/processing-1277-4.0b2/processing-4.0b2-linux64.tgz
+# tag_name "processing-0270-3.5.4"
+
+
+continue_function() {
+	read -r answer
+	case "$answer" in
+		j )      
+			:	
+			;;
+		n ) 		
+			exit 0
+			;;
+		*)  					
+			exit 1  
+	esac
+}
+
+printf "%s\n" "Dit script download en installeert de laatste versie van Processing op je systeem. Doorgaan? (j/n)"
+
+continue_function
+
+
+url="https://api.github.com/repos/processing/processing4/releases/latest"
+
+tag_name=$(curl -s "$url" | grep "tag_name") || { echo "Error: curl lijkt problemen te hebben met de url in dit script of netwerkprobleem." >&2; exit 1; }
+
+# Knippen en plakken om de juist url te genereren middels 'parameter expansion'.
+#tag_name voorbeeld: "processing-0270-3.5.4"
+app_name="processing"
+tag_name_part0="${tag_name#*-}"  # Verwijder alles voor het eerste '-' teken. -> 0270-3.5.4"
+tag_name_part1="${tag_name_part0%\"*}"  # Verwijder de laatste '"' en alles wat daarachter komt. -> 0270-3.5.4
+tag_name_part2="${tag_name_part1#*-}"  # Verwijder alles voor het eerste '-' teken. -> 3.5.4
+
+
+# Download locatie.
+location="https://github.com/processing/processing4/releases/download"
+url_end="$app_name-$tag_name_part1"
+extention="linux64.tgz"
+processing_file="$app_name-$tag_name_part2-$extention"
+
+# Dit moet de download url zijn.
+download_url="$location/$url_end/$processing_file"
+
+processing_destination="/opt"
+download_destination="/tmp"
+
+
+if [[ -d "$processing_destination/$app_name-$tag_name_part2" ]]; then
+	printf "%s\n" "Map $processing_destination/$app_name-$tag_name_part2 bestaat al." >&2; 
+	exit 1
+else 
+	for f in "$processing_destination/$app_name"*; do 
+		if [[ -d $f ]]; then 
+			printf "%s\n" "Waarschuwing: Er bevindt zich al een download van een andere versie van processing in de installatiemap ($processing_destination). Zorg dat je eerst eerdere installaties verwijderd. Weet je zeker dat je door wilt gaan? (n/j)" >&2
+			continue_function
+			break; 
+		fi; 
+	done
+fi
+
+
+if [[ -e "$download_destination/$processing_file" ]]; then
+	#printf "%s\n" "Bestand $download_destination/$processing_file bestaat al." >&2; 
+	mv "$download_destination/$processing_file" "$download_destination/$processing_file~"
+fi
+
+# Download Processing, bij fout, exit.
+wget --waitretry=10 -P "$download_destination" "$download_url" || exit 1
+
+
+# Bestand uitpakken.
+sudo tar zxvf "$download_destination/$processing_file" -C "$processing_destination" || exit 1 
+
+# Processing installeren:
+
+sudo "$processing_destination/./$app_name-$tag_name_part2/install.sh" || exit 1
+
+# Standaar installatie als root lijkt geen snelkoppeling op bureaublad te maken.
+#xdg-desktop-icon install /usr/share/applications/processing-pde.desktop || printf "%s\n" "Snelkoppeling naar bureaublad lijkt niet te lukken. Dat kan handmatig via het hoofdmenu." >&2;
+
+exit 0
+

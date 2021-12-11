@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Name=Mbot Web
+Comment=Webtoepassing
+Exec=sh -c "chromium --app=https://ide.mblock.cc/ --class=WebApp-Mbotchromiumbrowser2025 --user-data-dir\=\$HOME/.local/share/ice/profiles/Mbotchromiumbrowser2025"
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/djog-mbot-webapp/Mbotchromiumbrowser.png
+Categories=GTK;Development;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Mbotchromiumbrowser2025
+StartupNotify=true
+X-WebApp-URL=https://ide.mblock.cc/
+X-WebApp-Isolated=true
+

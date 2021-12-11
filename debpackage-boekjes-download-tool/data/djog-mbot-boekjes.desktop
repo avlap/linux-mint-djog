@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DJOG-boekjes-mbot
+Comment=Tool om djog mbot boekjes te downloaden.
+Exec=djog-boekjes-download -m
+Icon=djog-mbot-icon
+Terminal=true
+Type=Application
+Categories=ConsoleOnly;Utility;
+Keywords=boekjes;download;djog;DJOG;mbot;

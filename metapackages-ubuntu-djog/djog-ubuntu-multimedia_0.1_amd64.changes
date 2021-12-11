@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Fri, 10 Dec 2021 23:17:15 +0100
+Source: djog-ubuntu-multimedia
+Binary: djog-ubuntu-multimedia
+Architecture: all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-multimedia - Dit pakket installeert interessante multimedia software op Ubuntu
+Changes:
+ djog-ubuntu-multimedia (0.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ c35f2e2e3fbefc9e1eee876a7b6607eb482aeb69 2332 djog-ubuntu-multimedia_0.1_all.deb
+ 602de785eb3ae36cd336a663bb183954a1291bbf 5610 djog-ubuntu-multimedia_0.1_amd64.buildinfo
+Checksums-Sha256:
+ b5974bb1ec72751df86deb140fc4927c4fd46b86e657167e7d0136f2ab3a1304 2332 djog-ubuntu-multimedia_0.1_all.deb
+ 0a1960d60e6b9f46caf15a970492c18965e5f7c41068d87324ff965049518709 5610 djog-ubuntu-multimedia_0.1_amd64.buildinfo
+Files:
+ bca16bcef1f08ef9b1cce2b63c1c6974 2332 misc optional djog-ubuntu-multimedia_0.1_all.deb
+ aea4edcbc83af8791d60bb7b47855fa6 5610 misc optional djog-ubuntu-multimedia_0.1_amd64.buildinfo

@@ -1,0 +1,11 @@
+-s dir 
+-t deb 
+-p djog-scratch-webapp-install-0.1-any.deb 
+--name djog-scratch-webapp-install
+--version 0.1.0 
+--architecture all 
+--depends chromium-browser --depends webapp-manager
+--description "Tool om Scratch webapp te installeren." 
+--maintainer "avlap" 
+
+../djog-webapp-install=/usr/bin/djog-scratch-webapp-install djog-scratch-webapp.desktop=/usr/share/applications/djog-scratch-webapp.desktop djog-scratch-webapp-icon-128.png=/usr/share/icons/hicolor/128x128/apps/djog-scratch-webapp-icon.png share/ScratchWeb.png=/usr/share/djog-scratch-webapp/ScratchWeb.png share/webapp-Scratchweb0766.desktop=/usr/share/djog-scratch-webapp/webapp-Scratchweb0766.desktop

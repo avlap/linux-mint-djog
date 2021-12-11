@@ -1,0 +1,11 @@
+-s dir 
+-t deb 
+-p djog-mbot-webapp-install-0.1-any.deb 
+--name djog-mbot-webapp-install
+--version 0.1.0 
+--architecture all 
+--depends chromium-browser --depends webapp-manager --depends mlink
+--description "Tool om Mbot webapp te installeren." 
+--maintainer "avlap" 
+
+../djog-webapp-install=/usr/bin/djog-mbot-webapp-install djog-mbot-webapp.desktop=/usr/share/applications/djog-mbot-webapp.desktop djog-mbot-webapp-icon-128.png=/usr/share/icons/hicolor/128x128/apps/djog-mbot-webapp-icon.png share/Mbotchromiumbrowser.png=/usr/share/djog-mbot-webapp/Mbotchromiumbrowser.png share/webapp-Mbotchromiumbrowser2025.desktop=/usr/share/djog-mbot-webapp/webapp-Mbotchromiumbrowser2025.desktop

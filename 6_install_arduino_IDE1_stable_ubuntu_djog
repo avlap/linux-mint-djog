@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+
+# license: GPL 3
+
+# https://www.arduino.cc/en/software
+
+# Versie 2 van de IDE is in beta
+# Er is ook een portable IDE.
+
+# Nightly versie 1.8.x, maar lijkt ouder dan de default download
+
+#http://downloads.arduino.cc/arduino-nightly-linux64.tar.xz
+
+# Default download
+#http://downloads.arduino.cc/arduino-1.8.16-linux64.tar.xz
+
+# Beta version
+# https://github.com/arduino/arduino-ide
+# https://api.github.com/repos/arduino/arduino-ide
+# https://api.github.com/repos/arduino/arduino-ide/releases/latest
+
+
+
+continue_function() {
+	read -r answer
+	case "$answer" in
+		j )      
+			:	
+			;;
+		n ) 		
+			exit 0
+			;;
+		*)  					
+			exit 1  
+	esac
+}
+
+printf "%s\n" "Dit script download en installeert Arduino stable op je systeem. Doorgaan? (j/n)"
+
+continue_function
+
+
+# Check of arduino al geinstalleerd is.
+if command -v arduino >/dev/null; then
+	printf "%s\n" "Waarschuwing: Arduino lijkt al geinstalleerd te zijn. Exit."
+	exit 1
+fi
+
+# Check of unzip geinstalleerd is.
+if ! command -v xz >/dev/null; then
+	sudo apt install xz-utils -y || exit 1
+fi
+
+
+location="https://downloads.arduino.cc"
+app_name="arduino-1.8.16"
+extention="-linux64"
+compress_format=".tar.xz"
+arduino_file="$app_name$extention"
+tar_file="$arduino_file$compress_format"
+
+
+download_url="$location/$tar_file"
+
+arduino_destination="/opt"
+download_destination="/tmp"
+
+
+if [[ -d "$arduino_destination/$app_name" ]]; then
+	printf "%s\n" "Map $arduino_destination/$app_name bestaat al." >&2; 
+	exit 1
+else 
+	for f in "$arduino_destination/$app_name"*; do 
+		if [[ -d $f ]]; then 
+			printf "%s\n" "Waarschuwing: Er bevindt zich al een download van een andere versie van $app_name in de installatiemap ($arduino_destination). Zorg dat je eerst eerdere installaties verwijderd. Weet je zeker dat je door wilt gaan? (n/j)" >&2
+			continue_function
+			break; 
+		fi; 
+	done
+fi
+
+
+if [[ -e "$download_destination/$tar_file" ]]; then
+	#printf "%s\n" "Bestand $download_destination/$arduino_file bestaat al." >&2; 
+	mv "$download_destination/$tar_file" "$download_destination/$tar_file-tmp"
+fi
+
+# Download Processing, bij fout, exit.
+wget --waitretry=10 -P "$download_destination" "$download_url" || exit 1
+
+
+# Bestand uitpakken.
+sudo tar -xvf "$download_destination/$tar_file" -C "$arduino_destination" || exit 1 
+
+sudo "$arduino_destination/$app_name/./install.sh" || exit 1
+
+
+# Check of gebruiker in de dialout group zit. Zo niet, voeg het toe.
+if ! getent group dialout >/dev/null; then
+	sudo usermod -a -G dialout "$USER" || exit 1
+	printf "%s\n" "Je bent toegevoegd aan de dialout groep. Om met Arduino te werken, moet je opnieuw opstarten."
+fi
+
+
+exit 0
+

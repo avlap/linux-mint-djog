@@ -1,0 +1,15 @@
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+# Homepage: <enter URL here; no default>
+Standards-Version: 3.9.2
+
+Package: djog-ubuntu-communicatie
+version: 0.1
+Depends: 
+Suggests: veyon, epoptes, mumble, openboard
+Description: Dit pakket installeert interessante communicatiesoftware voor Desktop op Ubuntu.
+ Hoewel Discord gewoon op Ubuntu werkt, zijn er alternatieven. Simpel IRC chat (Konversation) of alleen audio en chat (Mumble). Matrix chat (Element).
+ Veyon en Eopoptes is classroom management software. Openboard is een virtual whiteboard. Jitsi.org is een alternatief op het web.

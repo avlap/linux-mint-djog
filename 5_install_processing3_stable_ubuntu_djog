@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+# license: GPL 3
+
+# Bron en credits: https://gist.github.com/gvenzl/1386755861fb42db492276d3864a378c
+
+# processing 3:
+# https://api.github.com/repos/processing/processing4/releases/latest
+# https://github.com/processing/processing/archive/
+# https://github.com/processing/processing/releases/download/processing-0270-3.5.4/processing-3.5.4-linux64.tgz
+
+# processing 4:
+# https://github.com/processing/processing4/releases/download/processing-1277-4.0b2/processing-4.0b2-linux64.tgz
+# tag_name "processing-0270-3.5.4"
+
+
+continue_function() {
+	read -r answer
+	case "$answer" in
+		j )      
+			:	
+			;;
+		n ) 		
+			exit 0
+			;;
+		*)  					
+			exit 1  
+	esac
+}
+
+
+
+app_name="processing"
+tag_name="3.5.4"  # This variable name is copied from the 'processing latest script'.
+
+printf "%s\n" "Dit script download en installeert Processing $tag_name op je systeem. Doorgaan? (j/n)"
+
+continue_function
+
+
+# Download locatie.
+extention="linux64.tgz"
+processing_file="$app_name-$tag_name-$extention"
+
+url="https://github.com/processing/processing/releases/download"
+download_url="$url/processing-0270-3.5.4/processing-3.5.4-linux64.tgz"
+
+processing_destination="/opt"
+download_destination="/tmp"
+
+
+# Check of website bereikbaar is.
+
+if ! curl -sS "$url" >/dev/null; then
+	printf "%s\n" "Website lijkt niet bereikbaar, heb je Internet? Afbreken." >&2
+	exit 1
+fi
+
+
+if [[ -d "$processing_destination/$app_name-$tag_name" ]]; then
+	printf "%s\n" "Map $processing_destination/$app_name-$tag_name bestaat al." >&2; 
+	exit 1
+else 
+	for f in "$processing_destination/$app_name"*; do 
+		if [[ -d $f ]]; then 
+			printf "%s\n" "Waarschuwing: Er bevindt zich al een download van een andere versie van processing in de installatiemap ($processing_destination). Zorg dat je eerst eerdere installaties verwijderd. Weet je zeker dat je door wilt gaan? (n/j)" >&2
+			continue_function
+			break; 
+		fi; 
+	done
+fi
+
+
+if [[ -e "$download_destination/$processing_file" ]]; then
+	#printf "%s\n" "Bestand $download_destination/$processing_file bestaat al." >&2; 
+	mv "$download_destination/$processing_file" "$download_destination/$processing_file~"
+fi
+
+
+# Download Processing, bij fout, exit.
+wget --waitretry=10 -P "$download_destination" "$download_url" || exit 1
+
+
+# Bestand uitpakken.
+sudo tar zxvf "$download_destination/$processing_file" -C "$processing_destination" || exit 1 
+
+# Processing installeren:
+
+sudo "$processing_destination/./$app_name-$tag_name/install.sh" || exit 1
+
+
+exit 0
+

@@ -1,0 +1,3 @@
+Package: firefox firefox-locale-*
+Pin: release o=Ubuntu
+Pin-Priority: 800

@@ -1,0 +1,142 @@
+#!/usr/bin/env bash
+
+# GPL 3
+
+# Dit script download DJOG boekjes voor arduino, mbot of processing naar ~/Documenten/DJOG. 
+
+
+# Initialize all the option variables.
+# This ensures we are not contaminated by variables from the environment.
+target="none"
+
+
+while :; do
+    case $1 in
+		-a)
+			target="Arduino"
+            break
+            ;;
+		-m)
+			target="Mbot"
+            break
+            ;;
+		-p)
+			target="Processing"
+            break
+            ;;
+        -?*)
+            printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
+            ;;
+        *)               # Default case: No more options, so break out of the loop.
+            break
+    esac
+
+    shift
+done
+
+
+[[ "$target" = "none" ]] && { printf "%s\n" "Geef svp aan of je arduino (-a), mbot (-m) of processing (-p) boekjes wilt downloaden." >&2; exit 1; }
+
+
+arduino_boeken_url="https://github.com/richelbilderbeek/arduino_voor_jonge_tieners/tree/master/boeken"
+processing_boeken_url="https://github.com/richelbilderbeek/processing_voor_jonge_tieners/tree/master/boeken"
+mbot_boeken_url="https://github.com/richelbilderbeek/mbot_voor_jonge_tieners/tree/master/boeken"
+
+
+if [[ "$target" = "Arduino" ]]; then
+	url="$arduino_boeken_url"
+elif [[ "$target" = "Mbot" ]]; then
+	url="$mbot_boeken_url"
+elif [[ "$target" = "Processing" ]]; then
+	url="$processing_boeken_url"
+else
+	printf "%s\n" "Er lijkt iets fout te gaan, optie -a, -m of -p vergeten?" >&2 
+	exit 1
+fi
+
+
+# Check of website bereikbaar is.
+
+if ! curl -sS "$url" >/dev/null; then
+	printf "%s\n" "Website lijkt niet bereikbaar, heb je Internet? Afbreken." >&2
+	exit 1
+fi
+
+
+# XDG_DOCUMENTS_DIR werkt niet.
+doc_dir="$HOME/Documenten"
+djog_dir="$doc_dir/DJOG"
+map_naam="Boekjes"
+download_dir="$djog_dir/$target/$map_naam"
+temp_dir="$download_dir/boekjes_backup"
+
+open_map_naam="Map openen"
+downloaden="Downloaden"
+
+# Maak een snelkoppeling naar map DJOG in Documenten. 
+
+# XDG_DOCUMENTS_DIR werkt niet op debian / ubuntu / mint blijkbaar.
+
+
+if ! [[ -d "$djog_dir" ]]; then
+	if ! [[ -d "$doc_dir" ]]; then
+		printf "%s\n" "Waarschuwing: $doc_dir lijkt niet te bestaan. Heb je Nederlands als taal ingesteld? Afbreken." >&2
+		exit 1
+	else
+		mkdir -p "$djog_dir" || exit 1;
+	fi
+fi
+
+
+if ! [[ -d "$download_dir" ]]; then
+	mkdir -pv "$download_dir" || exit 1
+else 
+	keuze=$(zenity --width=400 --height=200 \
+		--list --radiolist \
+		--cancel-label "Afbreken" \
+		--ok-label "Doorgaan" \
+		--text="Deze tool lijkt eerder te zijn gebruikt. Boekjes voor $target downloaden en evt. vervangen, of map openen?" \
+		--column=selectie --column="boekje" FALSE "$downloaden" FALSE "$open_map_naam" ) 
+	if [[ "$keuze" = "$downloaden" ]]; then
+		mkdir -p "$temp_dir"  # Maak een tijdelijke map en maak tijdelijke backup.
+		cp "$download_dir/"*.pdf* "$temp_dir" 
+		rm "$download_dir/"*.pdf*  # Maak de download map leeg.
+	elif [[ "$keuze" = "$open_map_naam" ]]; then
+		setsid -w -f xdg-open "$download_dir"
+		exit 0
+	else  # Er is op Cancel / Afbreken geklikt.
+		exit 0--waitretry=10
+	fi
+fi
+
+
+# Check welke pdf bestanden online zijn en download de pdf files. 
+# No cancel option, keep it simple stupid. Just a small remark, how to cancel if the downloading gets stuck.
+
+mapfile -t pdfs < <(lynx -dump -nonumbers -listonly "$url" | grep -Ei "boek_[[:digit:]].*\.pdf" | sed "s#/blob/master#/raw/master#" | sort -u) ; \
+	{ wget --waitretry=10 -P "$download_dir" "${pdfs[@]}" || exit 1; } | zenity --progress \
+			--width=400 \
+			--height=100 \
+			--title="Download" \
+			--text="Downloaden... (ctr-c in terminal to cancel)" \
+			--no-cancel \
+			--pulsate=1 \
+			--auto-close=1 \
+			--auto-kill=1
+
+
+# Vraag of de map geopend moet worden, via zenity GUI.
+if (zenity --question \
+	--text "De boekjes kun je vinden in $download_dir.\nMap openen?" \
+	--no-wrap=1 \
+	--ok-label "Ja" \
+	--cancel-label "Nee"); then
+	setsid -w -f xdg-open "$download_dir"
+fi
+
+
+# Verwijder tijdelijke map.
+[[ -d "$temp_dir" ]] && { rm -rf "$temp_dir" || exit 1; }
+
+
+exit 0

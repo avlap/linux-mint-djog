@@ -1,0 +1,13 @@
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+# Homepage: <enter URL here; no default>
+Standards-Version: 3.9.2
+
+Package: djog-ubuntu-spelletjes-junior
+version: 0.1
+Recommends: gcompris-qt, tuxpaint
+Description: Dit pakket installeert interessante spelletjes op Ubuntu voor kinderen rond 5 jaar.
+

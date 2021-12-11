@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# Voer het script uit vanaf de 'base directory'.
+base_dir="firefox-djog"
+
+
+# Backup of the users firefox folder.
+
+
+[[ -d "$HOME/.mozilla/firefox" ]] && {
+	cp -rv "$HOME/.mozilla/firefox" "$HOME/.mozilla/firefox_bak" || exit 1
+	rm -rv "$HOME/.mozilla/firefox" || exit 1;
+}
+
+
+# Remove linux mint version of firefox. It uses yahoo as default. It seems easiest to just remove that version and use the default from Ubuntu.
+
+sudo apt purge firefox -y || exit 1
+
+# Add a apt preferences file, so the firefox version of Ubuntu is installed instead.
+
+sudo cp -v "$base_dir/djog-firefox.pref" "/etc/apt/preferences.d/" || exit 1
+
+# Reinstall firefox
+
+sudo apt update && sudo apt install firefox -y || exit 1
+
+# Install simple google translate addon.
+
+sudo cp -v "$base_dir/simple-translate@sienori.xpi" "/usr/share/mozilla/extensions/"*/ || exit 1
+
+# Install ublock addon.
+
+sudo apt install webext-ublock-origin -y
+
+
+exit 0

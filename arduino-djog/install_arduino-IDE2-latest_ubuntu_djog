@@ -1,0 +1,124 @@
+#!/usr/bin/env bash
+
+# license: GPL 3
+
+# Bron en credits: https://gist.github.com/gvenzl/1386755861fb42db492276d3864a378c
+
+# processing 3:
+# https://api.github.com/repos/processing/processing4/releases/latest
+# https://github.com/processing/processing/archive/
+
+# processing 4:
+# https://github.com/processing/processing4/releases/download/processing-1277-4.0b2/processing-4.0b2-linux64.tgz
+# tag_name "processing-0270-3.5.4"
+
+
+# Beta version
+# https://github.com/arduino/arduino-ide
+# https://api.github.com/repos/arduino/arduino-ide
+# https://api.github.com/repos/arduino/arduino-ide/releases/latest
+
+continue_function() {
+	read answer
+	case "$answer" in
+		j )      
+			:	
+			;;
+		n ) 		
+			exit 0
+			;;
+		*)  					
+			exit 1  
+	esac
+}
+
+printf "%s\n" "Dit script download en installeert Arduino op je systeem. Doorgaan? (j/n)"
+
+continue_function
+
+# Check of unzip geinstalleerd is.
+if ! command -v unzip >/dev/null; then
+	sudo apt install unzip -y || exit 1
+fi
+
+# url="https://api.github.com/repos/processing/processing4/releases/latest"
+url="https://api.github.com/repos/arduino/arduino-ide/releases/latest"
+
+
+tag_name=$(curl -s "$url" | grep "tag_name") || { echo "Error: curl lijkt problemen te hebben met de url in dit script of netwerkprobleem." >&2; exit 1; }
+
+# Knippen en plakken om de juist url te genereren middels 'parameter expansion'.
+# tag_name voorbeeld: "processing-0270-3.5.4"
+#app_name="${tag_name%-*}" 
+#arduino-ide_2.0.0-rc1_Linux_64bit.zip
+# "tag_name": "2.0.0-rc1",
+
+app_name="arduino-ide_"
+tag_name_part0="${tag_name#*: \"}"  # Verwijder alles voor het eerste '-' teken. -> 0270-3.5.4"
+tag_name_part1="${tag_name_part0%\"*}"  # Verwijder de laatste '"' en alles wat daarachter komt. -> 0270-3.5.4
+tag_name_part1="${tag_name_part0%\"*}"  # Verwijder de laatste '"' en alles wat daarachter komt. -> 0270-3.5.4
+#tag_name_part2="${tag_name_part1#*-}"  # Verwijder alles voor het eerste '-' teken. -> 3.5.4
+
+#https://github.com/arduino/arduino-ide/releases/download/2.0.0-rc1/arduino-ide_2.0.0-rc1_Linux_64bit.zip
+location="https://github.com/arduino/arduino-ide/releases/download/"
+# Download locatie.
+#location="https://github.com/processing/processing4/releases/download"
+url_end="$tag_name_part1"
+#EXTENTION="linux64.tgz"
+EXTENTION="_Linux_64bit"
+COMPRESS_Format=".zip"
+#arduino_file="$app_name-$tag_name_part2-$EXTENTION"
+arduino_file="$app_name$tag_name_part1$EXTENTION"
+zip_file="$arduino_file$COMPRESS_Format"
+# Dit moet de download url zijn.
+
+echo "$arduino_file"
+
+download_url="$location/$url_end/$zip_file"
+
+arduino_destination="/opt"
+download_destination="/tmp"
+
+
+if [[ -d "$arduino_destination/$arduino_file" ]]; then
+	printf "%s\n" "Map $arduino_destination/$arduino_file bestaat al." >&2; 
+	exit 1
+else 
+	for f in "$processing_destination/$app_name"*; do 
+		if [[ -d $f ]]; then 
+			printf "%s\n" "Waarschuwing: Er bevindt zich al een download van een andere versie van $app_name in de installatiemap ($processing_destination). Zorg dat je eerst eerdere installaties verwijderd. Weet je zeker dat je door wilt gaan? (n/j)" >&2
+			continue_function
+			break; 
+		fi; 
+	done
+fi
+
+
+if [[ -e "$download_destination/$zip_file" ]]; then
+	#printf "%s\n" "Bestand $download_destination/$arduino_file bestaat al." >&2; 
+	mv "$download_destination/$zip_file" "$download_destination/$zip_file-tmp"
+fi
+
+# Download Processing, bij fout, exit.
+wget -P "$download_destination" "$download_url" || exit 1
+
+
+# Bestand uitpakken.
+#sudo tar zxvf "$download_destination/$arduino_file" -C "$arduino_destination" || exit 1 
+sudo unzip -d "$arduino_destination" "$download_destination/$zip_file"
+
+# Processing installeren:
+
+sudo "$arduino_destination/./$arduino_file/install.sh" || exit 1
+
+# Standaar installatie als root lijkt geen snelkoppeling op bureaublad te maken.
+#xdg-desktop-icon install /usr/share/applications/processing-pde.desktop || printf "%s\n" "Snelkoppeling naar bureaublad lijkt niet te lukken. Dat kan handmatig via kde menu." >&2;
+
+# Check of gebruiker in de dialout group zit. Zo niet, voeg het toe.
+if ! getent group dialout >/dev/null; then
+	sudo usermod -a -G dialout "$USER" || exit 1
+fi
+
+
+exit 0
+

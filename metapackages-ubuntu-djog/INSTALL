@@ -1,0 +1,14 @@
+# Vanaf git base directory (djog)
+#
+# Zie ook script in de base directory.
+#
+# Audio, spelletjes-junior, ... , worden niet standaard geinstalleerd.
+
+sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-admin*.deb
+sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-multimedia*.deb
+sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-programmeren*.deb
+sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-spelletjes*.deb
+#sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-audio*.deb
+#sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-spelletjes-junior*.deb
+
+

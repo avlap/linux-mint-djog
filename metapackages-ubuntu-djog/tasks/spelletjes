@@ -1,0 +1,15 @@
+### Commented entries have reasonable defaults.
+### Uncomment to edit them.
+# Source: <source package name; defaults to package name>
+Section: misc
+Priority: optional
+# Homepage: <enter URL here; no default>
+Standards-Version: 3.9.2
+
+Package: djog-ubuntu-spelletjes
+version: 0.1
+Recommends: frozen-bubble, supertux, pacman4console, bastet, cowsay, figlet 
+Suggests: supertuxkart, greed, snake4, gnome-sudoku, gnome-mines, quadrapassel
+Description: Dit pakket installeert interessante spelletjes op Ubuntu.
+ Bastet is tetris.
+

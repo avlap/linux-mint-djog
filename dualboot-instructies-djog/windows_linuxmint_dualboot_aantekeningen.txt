@@ -1,0 +1,16 @@
+Dualboot
+
+
+2) Check of Windows UEFI gebruikt en of Bitlocker niet gebruikt wordt.
+3) Als admin, rechtermuis op Windows start button (schijven bewerken (of iets dergelijks). Kies de NTFS partitie met Windows in de schijftabel en kies verkleinen (of iets dergelijks) (rechtermuis knop?). Verklein de schijf met +- 50GB
+4) Als admin prompt (command line) openen in Windows: shutdown.exe /r /o /f (reboot)
+5) Boot je Usb met Linux Mint Cinnamon 20.2, LTS versie (5 jaar support). Linux Mint is gebaseerd op Ubuntu, werkt dus min of meer hetzelfde.
+5) Kies UEFI instellingen in menu waarin je terecht komt. Kies opnieuw opstarten (evt F9 om je USB te kiezen als opstartschijf).
+6) Boot Linux Mint, installeer.
+7) Nederlandse taal,
+8) Toestenbord English(US, euro on 5)
+9) Multimedia codecs installatie aanvinken.
+10) Paritioneren: ik kies handmatig. Kies de vrije ruimte. Formateertype is ext4, toegewezen ruimte maak ik 2 GB kleiner (de helft van 4, de hoeveelheid geheugen), is ruim) (50 - 2 = 48 GB). Mountpunt root, ofwel: /
+11 Dan kies selecteer ik de overgebleven 2 GB en kies als formateertype linuxswap wisselgeheugen
+12) Maak gebruiker 'admin' aan, met wachtwoord 'Dirk9713'
+13) Installeren

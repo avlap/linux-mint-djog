@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DJOG-mbot-webapp
+Comment=Tool om Mbot webapp te installeren voor DJOG.
+Exec=djog-mbot-webapp-install -m
+Icon=djog-mbot-webapp-icon
+Terminal=true
+Type=Application
+Categories=ConsoleOnly;Utility;
+Keywords=webapp;mbot;djog;DJOG;web;installatie;installeren;

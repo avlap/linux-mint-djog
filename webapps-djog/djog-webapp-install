@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+# GPL 3
+
+# This script intalls webapps for mbot or scratch.
+
+
+target="none"
+name=
+number=
+
+while :; do
+    case $1 in
+		-m)
+			target="mbot"
+			name="Mbotchromiumbrowser"
+			number="2025"
+			data_dir="/usr/share/djog-mbot-webapp"
+			icon="$name.png"
+            break
+            ;;
+		-s)
+			target="scratch"
+			name="Scratchweb"
+			number="0766"
+			data_dir="/usr/share/djog-scratch-webapp"
+			icon="ScratchWeb.png"
+            break
+            ;;
+        -?*)
+            printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
+            ;;
+        *)               # Default case: No more options, so break out of the loop.
+            break
+    esac
+
+    shift
+done
+
+
+# Data.
+
+desktop_file="webapp-$name$number.desktop"
+
+# Ice.
+ice_dir="$HOME/.local/share/ice"
+ice_dir_icons="$ice_dir/icons"
+ice_dir_profiles="$ice_dir/profiles"
+
+# Local.
+
+local_desktop_file_dir="$HOME/.local/share/applications"
+
+
+setup_icon_desktop(){
+	if ! [[ -d "$ice_dir_icons" ]]; then
+		mkdir -pv "$ice_dir_icons" || { sleep 5; exit 1; }
+	fi
+	cp -v "$data_dir/$icon" "$ice_dir_icons" || { sleep 5; exit 1; }
+	cp -v "$data_dir/$desktop_file" "$local_desktop_file_dir" || { sleep 5; exit 1; }
+
+}
+
+
+#
+# MAIN
+#
+
+
+[[ "$target" = "none" ]] && { printf "%s\n" "Error: geef aan of je mbot (-m) of scratch (-m) webapp wilt installeren. Afbreken." >&2; exit 1; }
+
+
+if [[ -d "$ice_dir_profiles/$name$number" ]]; then
+	printf "%s\n" "Webapp lijkt al te bestaan. Afbreken" >&2
+	sleep 3
+	exit 1
+fi
+
+
+setup_icon_desktop
+
+printf "\n%s\n" "Success."
+
+sleep 3  # Sleep a bit, otherwise the user thinks it failed.
+
+exit 0

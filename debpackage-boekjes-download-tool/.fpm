@@ -1,0 +1,11 @@
+-s dir 
+-t deb 
+-p djog-boekjes-download-0.1-any.deb 
+--name djog-boekjes-download 
+--version 0.1.0 
+--architecture all 
+--depends zenity --depends wget --depends curl --depends lynx 
+--description "Tool om djog arduino, mbot of processing boekjes te downloaden" 
+--maintainer "avlap" 
+
+djog-boekjes-download=/usr/bin/djog-boekjes-download data/djog-arduino-boekjes.desktop=/usr/share/applications/djog-arduino-boekjes.desktop data/djog-mbot-boekjes.desktop=/usr/share/applications/djog-mbot-boekjes.desktop data/djog-processing-boekjes.desktop=/usr/share/applications/djog-processing-boekjes.desktop data/djog-arduino-icon-128.png=/usr/share/icons/hicolor/128x128/apps/djog-arduino-icon.png data/djog-mbot-icon-128.png=/usr/share/icons/hicolor/128x128/apps/djog-mbot-icon.png data/djog-processing-icon-128.png=/usr/share/icons/hicolor/128x128/apps/djog-processing-icon.png

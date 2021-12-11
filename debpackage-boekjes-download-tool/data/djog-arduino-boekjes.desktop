@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=DJOG-boekjes-arduino
+Comment=Tool om arduino boekjes te downloaden.
+Exec=djog-boekjes-download -a
+Icon=djog-arduino-icon
+Terminal=true
+Type=Application
+Categories=ConsoleOnly;Utility;
+Keywords=boekjes;download;djog;DJOG;arduino;
