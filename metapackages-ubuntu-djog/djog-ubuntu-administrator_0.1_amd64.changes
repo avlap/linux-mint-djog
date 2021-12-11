@@ -1,5 +1,5 @@
 Format: 1.8
-Date: Sat, 11 Dec 2021 22:01:29 +0100
+Date: Sat, 11 Dec 2021 23:48:38 +0100
 Source: djog-ubuntu-administrator
 Binary: djog-ubuntu-administrator
 Architecture: all
@@ -15,11 +15,11 @@ Changes:
  .
    * First version
 Checksums-Sha1:
- 879aed808d1149e5b44b91b139f6dd75bb82d22b 2532 djog-ubuntu-administrator_0.1_all.deb
- c2e9a3731fe60e451f81c245bc54e14062d65a41 5625 djog-ubuntu-administrator_0.1_amd64.buildinfo
+ fd28ba96ea3c2f9422255f8eee4144ad3b9f1038 2524 djog-ubuntu-administrator_0.1_all.deb
+ 4f7cb1a4e4994fc8fcc0a14056bc54dd05535655 5625 djog-ubuntu-administrator_0.1_amd64.buildinfo
 Checksums-Sha256:
- 463b66f67660d3f9815e1a2ecffdd798f86b4ddff3c9f66beaa0ff58679cbf92 2532 djog-ubuntu-administrator_0.1_all.deb
- 90467b17b1a30bcef3796d65e756a292c3d94f0e5f19023361b392bae225f86f 5625 djog-ubuntu-administrator_0.1_amd64.buildinfo
+ 2d02d0978af74c3290c02d0dc60b10fcb9522085c7504f8e86c1ef4e8f57966c 2524 djog-ubuntu-administrator_0.1_all.deb
+ 25a1c5eaed8b1737dc163dc75f2309c7ce65833c45452f5604b994ed259a7d81 5625 djog-ubuntu-administrator_0.1_amd64.buildinfo
 Files:
- 52d2f1e47406bf94a73cda73531187c5 2532 misc optional djog-ubuntu-administrator_0.1_all.deb
- f431248b4b2032b3844f5fd6ea0fe7a0 5625 misc optional djog-ubuntu-administrator_0.1_amd64.buildinfo
+ 347ed6c9b37b3d9206836fd536112a64 2524 misc optional djog-ubuntu-administrator_0.1_all.deb
+ d09e809ef91933cd3119de612fe3cdd8 5625 misc optional djog-ubuntu-administrator_0.1_amd64.buildinfo

@@ -4,14 +4,14 @@ Binary: djog-ubuntu-administrator
 Architecture: all
 Version: 0.1
 Checksums-Md5:
- 52d2f1e47406bf94a73cda73531187c5 2532 djog-ubuntu-administrator_0.1_all.deb
+ 347ed6c9b37b3d9206836fd536112a64 2524 djog-ubuntu-administrator_0.1_all.deb
 Checksums-Sha1:
- 879aed808d1149e5b44b91b139f6dd75bb82d22b 2532 djog-ubuntu-administrator_0.1_all.deb
+ fd28ba96ea3c2f9422255f8eee4144ad3b9f1038 2524 djog-ubuntu-administrator_0.1_all.deb
 Checksums-Sha256:
- 463b66f67660d3f9815e1a2ecffdd798f86b4ddff3c9f66beaa0ff58679cbf92 2532 djog-ubuntu-administrator_0.1_all.deb
+ 2d02d0978af74c3290c02d0dc60b10fcb9522085c7504f8e86c1ef4e8f57966c 2524 djog-ubuntu-administrator_0.1_all.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Sat, 11 Dec 2021 22:01:31 +0100
+Build-Date: Sat, 11 Dec 2021 23:48:40 +0100
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
  usr-local-has-includes
@@ -207,4 +207,4 @@ Installed-Build-Depends:
 Environment:
  DEB_BUILD_OPTIONS="parallel=2"
  LANG="en_US.UTF-8"
- SOURCE_DATE_EPOCH="1639256489"
+ SOURCE_DATE_EPOCH="1639262918"
