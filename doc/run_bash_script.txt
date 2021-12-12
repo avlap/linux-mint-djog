@@ -1,3 +1,4 @@
+# Lees de code van het script even door, zodat je weet dat het geen gekke dingen doet.
 # scriptname is de naam van het script.
 # Als bash script nog niet 'executable' is, in terminal:
 
