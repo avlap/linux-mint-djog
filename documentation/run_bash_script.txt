@@ -15,4 +15,8 @@ of als script 'executable' is:
 # Als bash script nog niet 'executable' is, eerst in terminal:
 chmod +x scriptname
 
+en dan
+
+./scriptname
+
 
