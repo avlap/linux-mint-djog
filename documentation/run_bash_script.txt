@@ -1,13 +1,18 @@
 # Lees de code van het script even door, zodat je weet dat het geen gekke dingen doet.
 # scriptname is de naam van het script.
-# Als bash script nog niet 'executable' is, in terminal:
 
-chmod +x scriptname
 
 # Het script starten in terminal:
 
 bash scriptname
 
-of 
+of als script 'executable' is:
+
 
 ./scriptname
+
+
+# Als bash script nog niet 'executable' is, eerst in terminal:
+chmod +x scriptname
+
+
