@@ -3,7 +3,7 @@
 # Installeer de boekjes tool voor DJOG arduino, mbot en processing
 
 sudo apt update && sudo apt upgrade -y &&\
-sudo apt install ./debpackage-boekjes-download-tool/djog-boekjes*.deb
+sudo apt install ./boekjes-download-tool-djog/djog-boekjes*.deb
 
 exit 0
 
