@@ -27,7 +27,11 @@ continue_function() {
 	esac
 }
 
-printf "%s\n" "Dit script download en installeert de laatste versie van Processing op je systeem. Doorgaan? (j/n)"
+
+
+app_name="processing"
+
+printf "%s\n" "Dit script download en installeert de laatste versie van $app_name op je systeem. Doorgaan? (j/n)"
 
 continue_function
 
@@ -38,7 +42,6 @@ tag_name=$(curl -s "$url" | grep "tag_name") || { echo "Error: curl lijkt proble
 
 # Knippen en plakken om de juist url te genereren middels 'parameter expansion'.
 #tag_name voorbeeld: "processing-0270-3.5.4"
-app_name="processing"
 tag_name_part0="${tag_name#*-}"  # Verwijder alles voor het eerste '-' teken. -> 0270-3.5.4"
 tag_name_part1="${tag_name_part0%\"*}"  # Verwijder de laatste '"' en alles wat daarachter komt. -> 0270-3.5.4
 tag_name_part2="${tag_name_part1#*-}"  # Verwijder alles voor het eerste '-' teken. -> 3.5.4
@@ -55,6 +58,12 @@ download_url="$location/$url_end/$processing_file"
 
 processing_destination="/opt"
 download_destination="/tmp"
+
+# Check of procesing al geinstalleerd is.
+if command -v "$app_name" >/dev/null; then
+	printf "%s\n" "Waarschuwing: $app_name lijkt al geinstalleerd te zijn. Exit."
+	exit 1
+fi
 
 
 if [[ -d "$processing_destination/$app_name-$tag_name_part2" ]]; then

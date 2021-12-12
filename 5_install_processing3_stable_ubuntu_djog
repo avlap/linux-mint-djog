@@ -38,15 +38,6 @@ printf "%s\n" "Dit script download en installeert Processing $tag_name op je sys
 continue_function
 
 
-# Check of arduino al geinstalleerd is.
-if command -v "$app_name" >/dev/null; then
-	printf "%s\n" "Waarschuwing: $app_name lijkt al geinstalleerd te zijn. Exit."
-	exit 1
-fi
-
-
-
-
 # Download locatie.
 extention="linux64.tgz"
 processing_file="$app_name-$tag_name-$extention"
@@ -56,6 +47,13 @@ download_url="$url/processing-0270-3.5.4/processing-3.5.4-linux64.tgz"
 
 processing_destination="/opt"
 download_destination="/tmp"
+
+
+# Check of arduino al geinstalleerd is.
+if command -v "$app_name" >/dev/null; then
+	printf "%s\n" "Waarschuwing: $app_name lijkt al geinstalleerd te zijn. Exit."
+	exit 1
+fi
 
 
 # Check of website bereikbaar is.
