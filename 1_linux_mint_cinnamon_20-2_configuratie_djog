@@ -46,7 +46,7 @@ sudo dpkg-reconfigure --priority=low unattended-upgrades || exit 1
 # Scherm helderheid verminderen voor minder batterijconsumptie.
 
 if [[ -e "/sys/class/backlight/intel_backlight/max_brightness" ]]; then
-	# sudo cp "/sys/class/backlight/intel_backlight/brightness" "/sys/class/backlight/intel_backlight/brightness"_bak || exit 1  # FIXME: kan geen backup maken, niet de juiste rechten als root?! 
+	sudo cp "/sys/class/backlight/intel_backlight/brightness" "/sys/class/backlight/intel_backlight/brightness"_bak || exit 1  # FIXME: kan geen backup maken, niet de juiste rechten als root?! 
 	read -r max_brightness < "/sys/class/backlight/intel_backlight/max_brightness" || exit 1
 	reduced_brightness=$((max_brightness * 80 / 100 )) || exit 1
 	echo "$reduced_brightness" | sudo tee /sys/class/backlight/intel_backlight/brightness || exit 1
