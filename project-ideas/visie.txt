@@ -1,7 +1,13 @@
+Linux is open source. Ermee werken leert jongeren dat je dingen zelf kan veranderen (you can hack this!). Dat is een andere rol en mentaliteit dan de gebruikelijke rol van standaard eindgebruiker (consument), waarbij een bedrijf een softareproduct aanlevert, die je kan gebruiken maar niet, of slechts in beperkte mate, kan wijzigen. Open source betekent ook dat je kan zien hoe andere programmeurs iets voor elkaar krijgen. Je kan het gebruiken en naar je eigen wens veranderen. Je kan er van leren.
+
+Linux Mint is een Linuxdistributie gebaseerd op Ubuntu, die het gebruik van Linux toegankelijk maakt voor nieuwe gebruikers. Voor standaardtaken als het opstarten van Arduino of Processing, is het net zo makkelijk als het gebruik van het besturingssysteem dat je gewend bent. 
+
+Het idee:
+
 
 Jongeren krijgen toegang tot een standaard djog account zonder admin rechten.
 
-Als de jongere enig verantwoordelijkheidsgevoel toont en inmiddels is begonnen met arduino of processing, is er de mogelijkheid om een eigen account te krijgen, met admin rechten. Het idee hierachter is dat jongeren naast het leren programmeren ook ervaring kunnen opdoen met het leren werken op Linux, mochten ze daar interesse in hebben. Het is geen doel op zich. Het is ook wel leuk als je je eigen account hebt natuurlijk. Het is van de begeleider afhankelijk, of, hoe en wanneer een eigen account wenselijk is en welke rechten daar volgens de begeleider bij passen.
+Als de jongere enig verantwoordelijkheidsgevoel toont en inmiddels is begonnen met arduino of processing, is er de mogelijkheid om een eigen account te krijgen, met admin rechten. Het idee hierachter is dat jongeren naast het leren programmeren ook ervaring kunnen opdoen met het leren werken op Linux, mochten ze daar interesse in hebben. Het is geen doel op zich. Het is ook wel leuk als je je eigen account hebt natuurlijk. Het is van de begeleider afhankelijk, of, hoe en wanneer een eigen account wenselijk is en welke rechten daar volgens de begeleider bij passen. Jongeren geen eigen account geven, hoort dus ook zeker tot de opties. In de praktijk zal ook moeten blijken wat voor consequenties een eigen account heeft voor de leeromgeving.
 
-Met de backup software 'shiftmate' kun je een snapshot maken van het huidige systeem, waar je altijd weer naar terug kan, mocht de jongere het systeem om zeep helpen. Daarvoor heb je wel voldoende harde schijf ruimte nodig(!).
+Technisch gezien, kun je met de standaard meegeleverde backup software 'timeshift', een snapshot maken van het huidige systeem, waar je altijd weer naar terug kan, mocht de jongere het systeem om zeep helpen. Dit biedt dus ruimte voor de jongere om fouten te maken. Voor de begeleider is dit dan relatief makkelijk te herstellen. (Daarvoor heb je wel voldoende harde schijf ruimte nodig(!).
 
