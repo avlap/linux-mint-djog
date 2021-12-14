@@ -1,0 +1,7 @@
+
+Jongeren krijgen toegang tot een standaard djog account zonder admin rechten.
+
+Als de jongere enig verantwoordelijkheidsgevoel toont en inmiddels is begonnen met arduino of processing, is er de mogelijkheid om een eigen account te krijgen, met admin rechten. Het idee hierachter is dat jongeren naast het leren programmeren ook ervaring kunnen opdoen met het leren werken op Linux, mochten ze daar interesse in hebben. Het is geen doel op zich. Het is ook wel leuk als je je eigen account hebt natuurlijk. Het is van de begeleider afhankelijk, of, hoe en wanneer een eigen account wenselijk is en welke rechten daar volgens de begeleider bij passen.
+
+Met de backup software 'shiftmate' kun je een snapshot maken van het huidige systeem, waar je altijd weer naar terug kan, mocht de jongere het systeem om zeep helpen. Daarvoor heb je wel voldoende harde schijf ruimte nodig(!).
+
