@@ -9,7 +9,7 @@ Dualboot
 6) Boot Linux Mint, installeer.
 7) Nederlandse taal,
 8) Toestenbord English(US, euro on 5)
-9) Multimedia codecs installatie aanvinken.
+9) Multimedia codecs installatie NIET aanvinken. Installeren we later.
 10) Paritioneren: ik kies handmatig. Kies de vrije ruimte. Formateertype is ext4, toegewezen ruimte maak ik 2 GB kleiner (de helft van 4, de hoeveelheid geheugen), is ruim) (50 - 2 = 48 GB). Mountpunt root, ofwel: /
 11 Dan kies selecteer ik de overgebleven 2 GB en kies als formateertype linuxswap wisselgeheugen
 12) Maak gebruiker 'admin' aan, met wachtwoord 'Dirk9713'
