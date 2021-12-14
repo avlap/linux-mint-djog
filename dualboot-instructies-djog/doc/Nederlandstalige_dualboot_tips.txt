@@ -1,0 +1,6 @@
+Windows 10 voorbereiden:
+https://makkelijkelinuxtips.blogspot.com/p/voorbereiden.html
+(Let op!! In tegenstelling tot wat in de tips genoemd wordt, is het officiele advies is om secure boot niet uit te zetten. Dat zou ook niet nodig moeten zijn.)
+
+12 tips voor het installeren van Linux Mint.
+https://makkelijkelinuxtips.blogspot.com/p/installatietips.html
