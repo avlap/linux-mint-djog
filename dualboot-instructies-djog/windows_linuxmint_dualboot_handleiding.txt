@@ -6,7 +6,7 @@ Zie ook de map 'docs' voor extra informatie.
 
 Download Linux Mint Cinnamon 20.x LTS en zet het op een usb-stick.
 
-1) Check of Windows UEFI gebruikt en of Bitlocker niet gebruikt wordt (op de laptops van DJO lijkt beide het geval).
+1) Check of Windows UEFI gebruikt en of Bitlocker niet gebruikt wordt (op de laptops van DJO is UEFI in gebruik en Bitlocker niet, dus dat lijkt goed.)
 2) Als admin, rechtermuis op Windows start button, schijfbeheer. Kies de NTFS partitie met Windows in de schijftabel en kies 'volume verkleinen' (via rechtermuis knop). Verklein de schijf met +- 50GB (50000 MB).
 3) Als admin prompt (command line) openen in Windows: shutdown.exe /r /o /f
 4) Druk op Enter en de computer zal binnen 1 minuut herstarten.
