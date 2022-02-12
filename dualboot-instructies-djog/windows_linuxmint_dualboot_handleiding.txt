@@ -1,31 +1,38 @@
-Dualboot
+Dualboot Windows | Linux instructies.
 
 
-2) Check of Windows UEFI gebruikt en of Bitlocker niet gebruikt wordt (op de laptops van DJO lijkt beide het geval).
-3) Als admin, rechtermuis op Windows start button, schijfbeheer. Kies de NTFS partitie met Windows in de schijftabel en kies 'volume verkleinen' (via rechtermuis knop). Verklein de schijf met +- 50GB (50000 MB).
-4) Als admin prompt (command line) openen in Windows: shutdown.exe /r /o /f (reboot)
+Zie screenshots van installatieproces in de map 'install_screenshots'.
+Zie ook de map 'docs' voor extra informatie.
+
+Download Linux Mint Cinnamon 20.x LTS en zet het op een usb-stick.
+
+1) Check of Windows UEFI gebruikt en of Bitlocker niet gebruikt wordt (op de laptops van DJO lijkt beide het geval).
+2) Als admin, rechtermuis op Windows start button, schijfbeheer. Kies de NTFS partitie met Windows in de schijftabel en kies 'volume verkleinen' (via rechtermuis knop). Verklein de schijf met +- 50GB (50000 MB).
+3) Als admin prompt (command line) openen in Windows: shutdown.exe /r /o /f
+4) Druk op Enter en de computer zal binnen 1 minuut herstarten.
 5) Kies een optie: Problemen oplossen; Geavanceerde opties; Instellingen voor UEFI-firmware; Opnieuw opstarten; 
-Steek je Usb stick met Linux Mint Cinnamon 20.2, LTS versie (5 jaar support) in de laptop.
-F9 Boot Device Options
-6) Kies USB Hard Drive, je usb stick met Linux Mint. 
-7) Start Linux Mint
-8) Maak connectie met het wifi netwerk of internet via een kabel.
-9) Install Linux Mint
-Kies Nederlandse taal
-Kies toetsenbord Enlish(VS euroteken op 5)
-Multimedia-ondersteuning (codecs); NIET aanvinken. Verder.
-Installatietype / partitioneren. Installeer Linux Mint naast Windows Boot Manager zal werken. 
-Ik kies voor 'Iets anders' voor handmatige partitionering. Selecteer de vrije ruimte (+- 50000MB). Klik op het plusteken (toevoegen) 
-Ik maak de aangegeven Gootte (+- 50000MB), kleiner met 2000MB
-Aankoppelpunt kies ik '/' (wat staat voor root). De rest laat ik staan zoals het staat. Ok.
-Dan kies ik de vrije ruimte van +- 2000MB. Klik plus. Kies: 'Gebruiken als': Wisselgeheugen (swap area). De rest laat ik staan zoals het staat. Ok.
-Kies: Installeer nu.
-Tijdszone Amsterdam
-Uw naam: djoadmin
-WW: Dirk9713 (mijn ww vragen om aan te melden, persoonlijke map NIET versleutelen)
+6) Steek je Usb stick met Linux Mint Cinnamon 20.2, LTS versie (5 jaar support) in de laptop.
+7) F9 Boot Device Options
+8) Kies USB Hard Drive, je usb stick met Linux Mint. 
+
+9) Start Linux Mint
+10) Optioneel en aangeraden: maak connectie met het wifi netwerk of internet via een kabel.
+
+11) Install Linux Mint
+12) Kies Nederlandse taal
+13) Kies toetsenbord Enlish(VS euroteken op 5)
+14) Multimedia-ondersteuning (codecs); NIET aanvinken. Verder.
+15) Installatietype / partitioneren: Ik kies voor 'Iets anders', maar de optie 'Installeer Linux Mint naast Windows Boot Manager' zou ook gewoon moeten werken en is eenvoudiger. 
+16) Ik kies voor 'Iets anders' voor handmatige partitionering. Selecteer de vrije ruimte (+- 50000MB). Klik op het plusteken voor het toevoegen van een partitie. 
+17) Ik maak de aangegeven Gootte (+- 50000MB), kleiner met 2000MB (voor wisselgeheugen).
+18) Aankoppelpunt kies ik '/' (wat staat voor root). De rest laat ik staan zoals het staat. Ok.
+19) Dan kies ik de vrije ruimte van +- 2000MB. Klik plus. Kies: 'Gebruiken als': Wisselgeheugen (swap area). De rest laat ik staan zoals het staat. Ok.
+20) Kies: Installeer nu.
+21) Tijdszone Amsterdam
+22) Uw naam: djoadmin
+23) ww: Dirk9713 (mijn wachtwoord vragen om aan te melden, persoonlijke map NIET versleutelen)
+
 De installatie wordt nu uitgevoerd en duurt ongeveer 5 - 10 min. Geduldig wachten tot je een melding krijgt om de laptop te herstarten. Volg de instructies.
 Je krijgt nu bij elke keer als je de laptop opstart, de keuze om of Linux Mint of Windows op te starten.
-
-Nu kun je de scripts installeren voor configuratie DJO laptop.
 
 Mocht je tijdens gebruik de vraag krijgen om een wachtwoord in te voeren voor 'security boot', kies dan voor Dirk9713
