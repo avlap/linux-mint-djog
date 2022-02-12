@@ -63,14 +63,14 @@ fi
 
 #Add normal user djog, without root access. Give it password 'djog'.
 
-sudo adduser djog
+sudo adduser djo
 
 # Add djog to dialout group for Arduino.
 
-sudo usermod -a -G dialout djog 
+sudo usermod -a -G dialout djo
 
 
-[[ "$XDG_CURRENT_DESKTOP" != "X-Cinnamon" ]] && { printf "%s\n" "Waarschuwing: Desktopomgeving Cinnamon niet gedetecteerd. Batterij applet setup slaan we over." >&2; exit 1; }
+#[[ "$XDG_CURRENT_DESKTOP" != "X-Cinnamon" ]] && { printf "%s\n" "Waarschuwing: Desktopomgeving Cinnamon niet gedetecteerd. Batterij applet setup slaan we over." >&2; exit 1; }
 
 
 # Backup originele file.
