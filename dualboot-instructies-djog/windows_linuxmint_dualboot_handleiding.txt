@@ -23,8 +23,8 @@ Download Linux Mint Cinnamon 20.x LTS en zet het op een usb-stick.
 13) Kies toetsenbord Enlish(VS euroteken op 5)
 14) Multimedia-ondersteuning (codecs); NIET aanvinken. Verder.
 15) Installatietype / partitioneren: Ik kies voor 'Iets anders', maar de optie 'Installeer Linux Mint naast Windows Boot Manager' zou ook gewoon moeten werken en is eenvoudiger. 
-16) Ik kies voor 'Iets anders' voor handmatige partitionering. Selecteer de vrije ruimte (+- 50000MB). Klik op het plusteken voor het toevoegen van een partitie. 
-17) Ik maak de aangegeven Gootte (+- 50000MB), kleiner met 2000MB (voor wisselgeheugen).
+16) Ik kies voor 'Iets anders' voor handmatige partitionering. Selecteer de vrije ruimte en maak de nieuw partitie +- 50Gb groot (50000MB). Klik op het plusteken voor het toevoegen van een partitie. 
+17) Ik maak de aangegeven Gootte (+- 50000MB), kleiner met 2000MB (2Gb), voor wisselgeheugen.
 18) Aankoppelpunt kies ik '/' (wat staat voor root). De rest laat ik staan zoals het staat. Ok.
 19) Dan kies ik de vrije ruimte van +- 2000MB. Klik plus. Kies: 'Gebruiken als': Wisselgeheugen (swap area). De rest laat ik staan zoals het staat. Ok.
 20) Kies: Installeer nu.
