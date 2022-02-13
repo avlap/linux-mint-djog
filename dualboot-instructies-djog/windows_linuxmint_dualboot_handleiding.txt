@@ -7,7 +7,8 @@ Zie ook de map 'docs' voor extra informatie.
 Download Linux Mint Cinnamon 20.x LTS en zet het op een usb-stick.
 
 1) Check of Windows UEFI gebruikt en of Bitlocker niet gebruikt wordt (op de laptops van DJO is UEFI in gebruik en Bitlocker niet, dus dat lijkt goed.)
-2) Als admin, rechtermuis op Windows start button, schijfbeheer. Kies de NTFS partitie met Windows in de schijftabel en kies 'volume verkleinen' (via rechtermuis knop). Verklein de schijf met +- 50GB (50000 MB).
+2) Als admin, rechtermuis op Windows start button, schijfbeheer. Kies de NTFS partitie met Windows in de schijftabel en kies 'volume verkleinen' (via rechtermuis knop). 
+Verklein de schijf met +- 50GB (50000 MB). Op dit gedeelte zal Linux Mint geinstalleerd worden.
 3) Als admin prompt (command line) openen in Windows: shutdown.exe /r /o /f
 4) Druk op Enter en de computer zal binnen 1 minuut herstarten.
 5) Kies een optie: Problemen oplossen; Geavanceerde opties; Instellingen voor UEFI-firmware; Opnieuw opstarten; 
@@ -23,16 +24,23 @@ Download Linux Mint Cinnamon 20.x LTS en zet het op een usb-stick.
 13) Kies toetsenbord Enlish(VS euroteken op 5)
 14) Multimedia-ondersteuning (codecs); NIET aanvinken. Verder.
 15) Installatietype / partitioneren: Ik kies voor 'Iets anders', maar de optie 'Installeer Linux Mint naast Windows Boot Manager' zou ook gewoon moeten werken en is eenvoudiger. 
-16) Ik kies voor 'Iets anders' voor handmatige partitionering. Selecteer de vrije ruimte en maak de nieuw partitie +- 50Gb groot (50000MB). Klik op het plusteken voor het toevoegen van een partitie. 
+16) Ik kies voor 'Iets anders' voor handmatige partitionering. Selecteer de vrije ruimte en maak de nieuw partitie +- 50Gb groot (50000MB). 
+Klik op het plusteken voor het toevoegen van een partitie. 
 17) Ik maak de aangegeven Gootte (+- 50000MB), kleiner met 2000MB (2Gb), voor wisselgeheugen.
 18) Aankoppelpunt kies ik '/' (wat staat voor root). De rest laat ik staan zoals het staat. Ok.
-19) Dan kies ik de vrije ruimte van +- 2000MB. Klik plus. Kies: 'Gebruiken als': Wisselgeheugen (swap area). De rest laat ik staan zoals het staat. Ok.
+19) Dan kies ik de vrije ruimte van +- 2000MB. Klik plus. Kies: 'Gebruiken als': Wisselgeheugen (swap area). De rest laat ik staan zoals het staat! Ok. 
+(Deze stap kan visueel afwijken van screenshot 2 mbt swap area in de map 'install_screenshots').
 20) Kies: Installeer nu.
 21) Tijdszone Amsterdam
 22) Uw naam: djoadmin
-23) ww: Dirk9713 (mijn wachtwoord vragen om aan te melden, persoonlijke map NIET versleutelen)
+23) wachtwoord: Dirk9713 (mijn wachtwoord vragen om aan te melden, persoonlijke map NIET versleutelen)
 
 De installatie wordt nu uitgevoerd en duurt ongeveer 5 - 10 min. Geduldig wachten tot je een melding krijgt om de laptop te herstarten. Volg de instructies.
 Je krijgt nu bij elke keer als je de laptop opstart, de keuze om of Linux Mint of Windows op te starten.
 
-Mocht je tijdens gebruik de vraag krijgen om een wachtwoord in te voeren voor 'security boot', kies dan voor Dirk9713
+Na installatie kun je de configuratiescripts uitvoeren in de hoofdmap van deze git repository. Er wordt tijdens het uitvoeren van de scripts ook 
+een nieuwe gebruiker aangemaakt 'djo'. Kies voor het wachtwoord: djo
+
+Mocht je tijdens gebruik van Linux Mint de vraag krijgen om een wachtwoord in te voeren voor 'security boot', kies dan voor Dirk9713
+
+
