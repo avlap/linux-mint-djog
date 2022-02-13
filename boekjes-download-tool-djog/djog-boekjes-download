@@ -10,14 +10,17 @@
 target="none"
 
 
+# Disable mbot.
+#-m)
+#target="Mbot"
+#            break
+#            ;;
+
+
 while :; do
     case $1 in
 		-a)
 			target="Arduino"
-            break
-            ;;
-		-m)
-			target="Mbot"
             break
             ;;
 		-p)
@@ -35,22 +38,25 @@ while :; do
 done
 
 
-[[ "$target" = "none" ]] && { printf "%s\n" "Geef svp aan of je arduino (-a), mbot (-m) of processing (-p) boekjes wilt downloaden." >&2; exit 1; }
+
+#[[ "$target" = "none" ]] && { printf "%s\n" "Geef svp aan of je arduino (-a), mbot (-m) of processing (-p) boekjes wilt downloaden." >&2; exit 1; }
+[[ "$target" = "none" ]] && { printf "%s\n" "Geef svp aan of je arduino (-a) of processing (-p) boekjes wilt downloaden." >&2; exit 1; }
 
 
 arduino_boeken_url="https://github.com/richelbilderbeek/arduino_voor_jonge_tieners/tree/master/boeken"
 processing_boeken_url="https://github.com/richelbilderbeek/processing_voor_jonge_tieners/tree/master/boeken"
-mbot_boeken_url="https://github.com/richelbilderbeek/mbot_voor_jonge_tieners/tree/master/boeken"
+#mbot_boeken_url="https://github.com/richelbilderbeek/mbot_voor_jonge_tieners/tree/master/boeken"
 
 
 if [[ "$target" = "Arduino" ]]; then
 	url="$arduino_boeken_url"
-elif [[ "$target" = "Mbot" ]]; then
-	url="$mbot_boeken_url"
+#elif [[ "$target" = "Mbot" ]]; then
+#	url="$mbot_boeken_url"
 elif [[ "$target" = "Processing" ]]; then
 	url="$processing_boeken_url"
 else
-	printf "%s\n" "Er lijkt iets fout te gaan, optie -a, -m of -p vergeten?" >&2 
+	#printf "%s\n" "Er lijkt iets fout te gaan, optie -a, -m of -p vergeten?" >&2 
+	printf "%s\n" "Er lijkt iets fout te gaan, optie -a of -p vergeten?" >&2 
 	exit 1
 fi
 
