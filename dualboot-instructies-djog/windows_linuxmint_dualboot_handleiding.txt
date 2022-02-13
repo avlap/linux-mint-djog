@@ -29,7 +29,8 @@ Klik op het plusteken voor het toevoegen van een partitie.
 17) Ik maak de aangegeven Gootte (+- 50000MB), kleiner met 2000MB (2Gb), voor wisselgeheugen.
 18) Aankoppelpunt kies ik '/' (wat staat voor root). De rest laat ik staan zoals het staat. Ok.
 19) Dan kies ik de vrije ruimte van +- 2000MB. Klik plus. Kies: 'Gebruiken als': Wisselgeheugen (swap area). De rest laat ik staan zoals het staat! Ok. 
-(Deze stap kan visueel afwijken van screenshot 2 mbt swap area in de map 'install_screenshots').
+(Deze stap kan visueel afwijken van screenshot 2 mbt swap area in de map 'install_screenshots'. Deze stap is niet ingewikkeld, maar mocht je er niet uitkomen: 
+het niet aanmaken van een 'swap area' heeft geen effect op het succes van de installatie).
 20) Kies: Installeer nu.
 21) Tijdszone Amsterdam
 22) Uw naam: djoadmin
