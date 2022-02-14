@@ -6,7 +6,7 @@
 
 target="${1?argument ontbreekt, waar wil je hulp mee? (djo-help -h)}"
 
-git_hints=("git add ." "git commit -am \"mijn commit\"" "git push origin main")
+git_hints=("git add ." "git commit -am \"mijn commit\"" "git push")
 term_hints=("cd /home/djo" "ls" "<TAB>" )
 
 
