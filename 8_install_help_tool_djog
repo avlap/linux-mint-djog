@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Installeer djo-help, tool voor hulp bij simpel gebruik van git, de terminal etc.
+
+#sudo apt update && sudo apt upgrade -y &&\
+sudo apt install ./help-tools-djog/djo-help*.deb
+
+exit 0
+
+
