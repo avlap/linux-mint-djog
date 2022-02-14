@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# GPL3+
+
+# Simpel script. Print geheugensteuntjes voor kinderen voor simpel gebruik van git en de terminal.
+
+target="${1?argument ontbreekt, waar wil je hulp mee? (djo-help -h)}"
+
+term_hints=("cd /home/djo" "ls" "TAB" )
+
+show_help() {
+	options_array=("-h -? --help" "-g --git" "-t --term --terminal")
+
+	printf "%s\n" "Opties:"
+	printf '%s\n' "${options_array[@]}"
+
+}
+
+
+while :; do
+    case $1 in
+        -h|-\?|--help)
+            show_help    # Display a usage synopsis.
+            exit
+            ;;
+		-g|--git)
+			target="git"
+            break
+            ;;
+		-t|--terminal|--term)
+			target="term"
+            break
+            ;;
+        ?*)
+            printf 'Waarschuwing: onbekende optie %s\n' "$1" >&2
+            ;;
+        *)               # Default case: No more options, so break out of the loop.
+            break
+    esac
+    shift
+done
+
+
+if [[ "$target" = "git" ]]; then
+	printf "%s\n" "git add ."
+	printf "%s\n" "git commit -m \"mijn commit\""
+	printf "%s\n" "git push origin main"
+elif [[ "$target" = "term" ]]; then
+	printf '%s\n' "${term_hints[@]}"
+fi
