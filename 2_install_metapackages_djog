@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y &&\
 sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-admin*.deb -y &&\
 sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-multimedia*.deb -y &&\
 sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-programmeren*.deb -y &&\
-sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-spelletjes*.deb -y 
+sudo apt install ./metapackages-ubuntu-djog/djog-ubuntu-spelletjes_*.deb -y 
 
 exit 0
 
