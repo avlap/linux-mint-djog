@@ -6,7 +6,7 @@
 
 target="${1?argument ontbreekt, waar wil je hulp mee? (djo-help -h)}"
 
-term_hints=("cd /home/djo" "ls" "TAB" )
+term_hints=("cd /home/djo" "ls" "<TAB>" )
 
 show_help() {
 	options_array=("-h -? --help" "-g --git" "-t --term --terminal")
