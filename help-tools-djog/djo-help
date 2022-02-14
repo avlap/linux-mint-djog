@@ -14,7 +14,7 @@ show_help() {
 	options_array=("-h -? --help" "-g --git" "-t --term --terminal")
 
 	printf "%s\n" "Opties:"
-	printf '%s\n' "${options_array[@]}"
+	printf "%s\n" "${options_array[@]}"
 
 }
 
