@@ -7,7 +7,7 @@
 target="${1?argument ontbreekt, waar wil je hulp mee? (djo-help -h)}"
 
 git_hints=("git add ." "git commit -am \"mijn commit\"" "git push")
-term_hints=("ls" "ls -a" "cd /home/djo" "cd"  "cd ~/" "cp" "cp -r" "trash test.txt" "hint: <TAB>" "hint: copy/paste ctr+shift+c ctr+shift+v" "hint: copy/paste selecteren/middelste muisknop" )
+term_hints=("ls" "ls -a" "cd /home/djo" "cd"  "cd ~/" "trash test.txt" "hint: <TAB>" "hint: copy/paste ctr+shift+c ctr+shift+v" "hint: copy/paste selecteren/middelste muisknop" )
 
 
 show_help() {
