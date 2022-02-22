@@ -7,7 +7,7 @@ Priority: optional
 Standards-Version: 3.9.2
 
 Package: djog-ubuntu-programmeren
-version: 0.1
+version: 0.1.1
 Depends: git
 Recommends: git-gui, giggle, tuxtype
 Suggests: fritzing
