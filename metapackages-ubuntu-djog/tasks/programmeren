@@ -9,7 +9,7 @@ Standards-Version: 3.9.2
 Package: djog-ubuntu-programmeren
 version: 0.1
 Depends: git
-Recommends: git-gui, tuxtype
+Recommends: git-gui, giggle, tuxtype
 Suggests: fritzing
 Description: Dit pakket installeert interessante programmeersoftware op Ubuntu.
  Tuxtype is een programma om te leren typen (computervaardigheden).
