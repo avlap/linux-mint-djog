@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Tue, 22 Feb 2022 15:11:14 +0100
+Source: djog-ubuntu-programmeren
+Binary: djog-ubuntu-programmeren
+Architecture: all
+Version: 0.1.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-programmeren - Dit pakket installeert interessante programmeersoftware op Ubuntu
+Changes:
+ djog-ubuntu-programmeren (0.1.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ deeabde9862a3cd6faf6d04c098471aa3aa20419 2316 djog-ubuntu-programmeren_0.1.1_all.deb
+ c75d67e6037203d8ee6576621fef76c63b0beaba 5882 djog-ubuntu-programmeren_0.1.1_amd64.buildinfo
+Checksums-Sha256:
+ 611e78a0c87ca0bcfda543e79214df17daf95bb138da089cd51d907a93602193 2316 djog-ubuntu-programmeren_0.1.1_all.deb
+ cfddfd1b9ab7679edc8316baa69d9543853a6e1f99c632177997a8675ba43a0a 5882 djog-ubuntu-programmeren_0.1.1_amd64.buildinfo
+Files:
+ a0f4467b0b7959aecdb5bae9570a03db 2316 misc optional djog-ubuntu-programmeren_0.1.1_all.deb
+ 8fd405be575ccff921350ea8d5f5dbd6 5882 misc optional djog-ubuntu-programmeren_0.1.1_amd64.buildinfo

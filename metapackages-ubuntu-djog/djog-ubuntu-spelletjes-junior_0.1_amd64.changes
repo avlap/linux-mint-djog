@@ -1,5 +1,5 @@
 Format: 1.8
-Date: Fri, 10 Dec 2021 23:17:35 +0100
+Date: Tue, 22 Feb 2022 15:11:28 +0100
 Source: djog-ubuntu-spelletjes-junior
 Binary: djog-ubuntu-spelletjes-junior
 Architecture: all
@@ -15,11 +15,11 @@ Changes:
  .
    * First version
 Checksums-Sha1:
- 8996991257004677021b82ac28c7f7d0739502b2 2248 djog-ubuntu-spelletjes-junior_0.1_all.deb
- 6c33e7db800127429ff7b9b09e5f307462275528 5645 djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
+ 7d16fdeb72315508b69ea7b5e06aa3ecca27c318 2248 djog-ubuntu-spelletjes-junior_0.1_all.deb
+ 175d1348f50ae08b0718e85b99855dbe9b5b21e4 5899 djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
 Checksums-Sha256:
- 049525c0543f0777adf65c07725d4ba7c892e336f5f00e9658f3abf4a27d6c39 2248 djog-ubuntu-spelletjes-junior_0.1_all.deb
- 4c4bd3f0515e5842b41994fca7441dd4e0a917c78c1d6c941af0e95b21d4e9d0 5645 djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
+ ed0966c0408f740e0fcd94cd58a82511c0b156d104ecd99d02f26a876bfc7e18 2248 djog-ubuntu-spelletjes-junior_0.1_all.deb
+ a21985ab59e7608f94ffda68203747473b00ab292202efde87013e50c42f1aa8 5899 djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
 Files:
- 251ac3cf40f3d3b2f6b195748125c080 2248 misc optional djog-ubuntu-spelletjes-junior_0.1_all.deb
- 74014306d4adaff823437c9505df05ee 5645 misc optional djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo
+ e70bf468714b7361bf2924964b6974f9 2248 misc optional djog-ubuntu-spelletjes-junior_0.1_all.deb
+ 81eef99667edb41a1fbc7388e161cf5e 5899 misc optional djog-ubuntu-spelletjes-junior_0.1_amd64.buildinfo

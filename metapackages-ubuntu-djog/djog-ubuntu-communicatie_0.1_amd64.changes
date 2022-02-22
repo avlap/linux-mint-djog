@@ -1,5 +1,5 @@
 Format: 1.8
-Date: Fri, 10 Dec 2021 23:17:05 +0100
+Date: Tue, 22 Feb 2022 15:10:54 +0100
 Source: djog-ubuntu-communicatie
 Binary: djog-ubuntu-communicatie
 Architecture: all
@@ -15,11 +15,11 @@ Changes:
  .
    * First version
 Checksums-Sha1:
- 9ff8458a3585a6783edcbb3fdd532356a825ed66 2424 djog-ubuntu-communicatie_0.1_all.deb
- 54346abd0715e29cf134a4f8848d6ad736fdbb2c 5620 djog-ubuntu-communicatie_0.1_amd64.buildinfo
+ 92d277f3535eb16775aead1dd6ea589961ecafcb 2416 djog-ubuntu-communicatie_0.1_all.deb
+ 7d9abb38e73bfe3c3d9239c570e1946aa895d1b0 5874 djog-ubuntu-communicatie_0.1_amd64.buildinfo
 Checksums-Sha256:
- 1e4b24797501d00277651f86b825e31fafe15d42889e45f6b2b1ba61d5a295af 2424 djog-ubuntu-communicatie_0.1_all.deb
- 0638dceb3b36a4746f610ee05e67758e83e60d066f5d6badcefeb36dc6acd436 5620 djog-ubuntu-communicatie_0.1_amd64.buildinfo
+ 5a358e9c1784e704223a961e53309547de0b4c21a80cbaada56beafe21cc8536 2416 djog-ubuntu-communicatie_0.1_all.deb
+ 21730ac7991141b52628bd45c244776b06f724a53a4f25e566742dd1f40c4666 5874 djog-ubuntu-communicatie_0.1_amd64.buildinfo
 Files:
- eb47c693a4f8b06733c877a3bf4f1d0d 2424 misc optional djog-ubuntu-communicatie_0.1_all.deb
- 340c4f9856d765dc071a732ef5d49e97 5620 misc optional djog-ubuntu-communicatie_0.1_amd64.buildinfo
+ e5443170fff271384d9c5c46378099c2 2416 misc optional djog-ubuntu-communicatie_0.1_all.deb
+ 65b8a542b14c2403d33724f889fd4ace 5874 misc optional djog-ubuntu-communicatie_0.1_amd64.buildinfo

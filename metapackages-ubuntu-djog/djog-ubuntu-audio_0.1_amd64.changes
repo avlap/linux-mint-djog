@@ -1,5 +1,5 @@
 Format: 1.8
-Date: Fri, 10 Dec 2021 23:16:54 +0100
+Date: Tue, 22 Feb 2022 15:10:44 +0100
 Source: djog-ubuntu-audio
 Binary: djog-ubuntu-audio
 Architecture: all
@@ -15,11 +15,11 @@ Changes:
  .
    * First version
 Checksums-Sha1:
- 0bdeb9714de24066f00c7959ea1108e164872775 2264 djog-ubuntu-audio_0.1_all.deb
- 01063b19af6c3b79090a3428fa4c877e28be5762 5585 djog-ubuntu-audio_0.1_amd64.buildinfo
+ 4b0d6128b153373b7d81c5f2a50df821be267477 2264 djog-ubuntu-audio_0.1_all.deb
+ 9617ba0df7c1477841bc1547b66140ff4ecdfe59 5839 djog-ubuntu-audio_0.1_amd64.buildinfo
 Checksums-Sha256:
- ed48e83178340451e63c3b41e18e3c1850c566115907845893836d23408a1e12 2264 djog-ubuntu-audio_0.1_all.deb
- 155882e0c71f8206b4079863f07fb48235096228a4a41088c63ddb6249fb4000 5585 djog-ubuntu-audio_0.1_amd64.buildinfo
+ 061f64fe1087fdc8ec3dee32f3a37549fd937e8b75dec53c9f2b44fdfddfd18d 2264 djog-ubuntu-audio_0.1_all.deb
+ a1e792d03728a036631ec78eb4501b4a67b2fba5f0f42b0b40a229b1ae8d944d 5839 djog-ubuntu-audio_0.1_amd64.buildinfo
 Files:
- f4f8f69bdf5202a53ec0f4f51026a8eb 2264 misc optional djog-ubuntu-audio_0.1_all.deb
- 969a999afa6015b26dcebef59dc1d10c 5585 misc optional djog-ubuntu-audio_0.1_amd64.buildinfo
+ 20dff53ccd5aa758da3ba292682cff07 2264 misc optional djog-ubuntu-audio_0.1_all.deb
+ a371d1a6598dc4a595a2c95d24f8c1a5 5839 misc optional djog-ubuntu-audio_0.1_amd64.buildinfo
