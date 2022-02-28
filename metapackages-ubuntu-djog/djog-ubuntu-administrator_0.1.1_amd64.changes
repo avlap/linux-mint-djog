@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 28 Feb 2022 15:37:22 +0100
+Source: djog-ubuntu-administrator
+Binary: djog-ubuntu-administrator
+Architecture: all
+Version: 0.1.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-administrator - Dit pakket installeert de software die nodig is om de tools voor
+Changes:
+ djog-ubuntu-administrator (0.1.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ e080fb291de9c81a2a1814dc8c793aee87be4684 2388 djog-ubuntu-administrator_0.1.1_all.deb
+ bacb35139ffc780172cdf8e17350f0b60075ee60 5885 djog-ubuntu-administrator_0.1.1_amd64.buildinfo
+Checksums-Sha256:
+ 027c198782354863c77edfbe70d74bcd29f13a50f192db0389a8fef5a249d875 2388 djog-ubuntu-administrator_0.1.1_all.deb
+ 28194d88ba09df8ca72cbcef6ce359a04cfeab7791dab9b22e106e61b2f7580e 5885 djog-ubuntu-administrator_0.1.1_amd64.buildinfo
+Files:
+ ec16e440f5991ae2e73a8ddac843e626 2388 misc optional djog-ubuntu-administrator_0.1.1_all.deb
+ 84ad7eb4d398acdc186b910af3671d78 5885 misc optional djog-ubuntu-administrator_0.1.1_amd64.buildinfo

@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 28 Feb 2022 15:38:21 +0100
+Source: djog-ubuntu-spelletjes
+Binary: djog-ubuntu-spelletjes
+Architecture: all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-spelletjes - Dit pakket installeert interessante spelletjes op Ubuntu.
+Changes:
+ djog-ubuntu-spelletjes (0.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ b6b26000e3ca04ebca3e07c6cc782491d3f315b3 2388 djog-ubuntu-spelletjes_0.1_all.deb
+ e81741a2398046de224c0a6467699645a10a9cb5 5862 djog-ubuntu-spelletjes_0.1_amd64.buildinfo
+Checksums-Sha256:
+ d9bfdc77ed7336315cd8b2e2958e9a738188d6ff9ac95f0a2e53ed41c1758697 2388 djog-ubuntu-spelletjes_0.1_all.deb
+ 37f2e919a540d7b0f17b5e249a5e6e958a762cbd1fed8c46e6f8eb00c3b11837 5862 djog-ubuntu-spelletjes_0.1_amd64.buildinfo
+Files:
+ 89acbb9d9cc0e11de73e6e3462408ae9 2388 misc optional djog-ubuntu-spelletjes_0.1_all.deb
+ 7bacaeecb3c942b63c6322d03691626a 5862 misc optional djog-ubuntu-spelletjes_0.1_amd64.buildinfo

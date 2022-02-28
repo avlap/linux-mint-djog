@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 28 Feb 2022 15:37:48 +0100
+Source: djog-ubuntu-communicatie
+Binary: djog-ubuntu-communicatie
+Architecture: all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-communicatie - Dit pakket installeert interessante communicatiesoftware voor Des
+Changes:
+ djog-ubuntu-communicatie (0.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ 2dbb74357611be731b5552eb7fdda0666f243296 2420 djog-ubuntu-communicatie_0.1_all.deb
+ df0626ecb7025433dd167be6948a16eefb0c58fd 5872 djog-ubuntu-communicatie_0.1_amd64.buildinfo
+Checksums-Sha256:
+ cfcd420b3e2fd021cc97a698b6141db6d608032c7e5affe175f8cdc33087da55 2420 djog-ubuntu-communicatie_0.1_all.deb
+ f1a571fac00a69cb216457ba8a16cd09e0e04d1951a177a62b5a630ca1703b95 5872 djog-ubuntu-communicatie_0.1_amd64.buildinfo
+Files:
+ 4ba3f38509fee06904d3027666738671 2420 misc optional djog-ubuntu-communicatie_0.1_all.deb
+ fa6992f884b59914ba239c858c072f77 5872 misc optional djog-ubuntu-communicatie_0.1_amd64.buildinfo

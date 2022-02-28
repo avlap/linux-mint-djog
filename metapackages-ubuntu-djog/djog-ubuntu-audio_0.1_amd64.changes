@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Mon, 28 Feb 2022 15:37:40 +0100
+Source: djog-ubuntu-audio
+Binary: djog-ubuntu-audio
+Architecture: all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Equivs Dummy Package Generator <debian@debian-T4>
+Changed-By: Equivs Dummy Package Generator <debian@debian-T4>
+Description:
+ djog-ubuntu-audio - Dit pakket installeert interessante audioproductie software voor
+Changes:
+ djog-ubuntu-audio (0.1) unstable; urgency=low
+ .
+   * First version
+Checksums-Sha1:
+ 3c819f2074589215ed560eae398145e7d3907c93 2264 djog-ubuntu-audio_0.1_all.deb
+ fcfc32eb26fde7cf8564c07871b8f79a15992709 5837 djog-ubuntu-audio_0.1_amd64.buildinfo
+Checksums-Sha256:
+ 95a136132ccd02178b88801ef42177dd265530efda0889dc52520a7213310f14 2264 djog-ubuntu-audio_0.1_all.deb
+ 781d351b1f8ee830b55a356c10460dce44bd1d92794c919fd6d325fe32dc909e 5837 djog-ubuntu-audio_0.1_amd64.buildinfo
+Files:
+ f759e4aa6354bf5f12697f4c2f56f98e 2264 misc optional djog-ubuntu-audio_0.1_all.deb
+ 405d17b6e88c8596cabcf9030baddd41 5837 misc optional djog-ubuntu-audio_0.1_amd64.buildinfo
