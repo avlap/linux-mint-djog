@@ -9,7 +9,8 @@ Standards-Version: 3.9.2
 Package: djog-ubuntu-administrator
 version: 0.1.1
 Depends: zenity, lynx, webapp-manager, chromium-browser
-Recommends: Suggests: powertop, tlp, espeak, ppa-purge
+#Recommends: 
+Suggests: powertop, tlp, espeak, ppa-purge
 Description: Dit pakket installeert de software die nodig is om de tools voor een DJOG installatie te laten werken of 
  wat handige tools zijn voor het beheer van een Ubuntu desktop.
 
